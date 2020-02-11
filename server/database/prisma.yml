@@ -1,0 +1,13 @@
+# the endpoint of your service (this also defines the cluster the service will be deployed to)
+endpoint: ${env:PRISMA_ENDPOINT}
+
+# to disable authentication:
+# disableAuth: true
+secret: ${env:PRISMA_SECRET}
+
+# the file path pointing to your data model
+datamodel: datamodel.prisma
+
+# seed your service with initial data based on seed.graphql
+seed:
+  import: seed.graphql
